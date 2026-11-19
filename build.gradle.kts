@@ -1,7 +1,7 @@
 plugins {
     java
     application
-    id("com.gradleup.shadow") version "9.3.0"
+    id("com.gradleup.shadow") version "9.6.1"
     `maven-publish`
 }
 
@@ -32,7 +32,7 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.named<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar>("shadowJar") {
+tasks.shadowJar {
     archiveClassifier.set("all")
 }
 
